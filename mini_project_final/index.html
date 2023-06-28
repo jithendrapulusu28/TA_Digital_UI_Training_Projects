@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Kraya</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet" />
+   <link rel="stylesheet" href="./mini_project_css/style.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+   <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+</head>
+
+<body>
+   <!-- header starts -->
+   <header id="top" class="sticky">
+      <nav class="user-section">
+         <ul class="user-list">
+            <li class="need-help uppercase"><i class="fa-solid fa-phone"></i><span>need help ?</span></li>
+            <div>
+               <ul>
+            <li class="list-height sign-in"><i class="fa-regular fa-user"></i><span id="user-name">sign-in</span>
+            <li id="wish-list" class="list-height"><span id="wishlist-text">WISHLIST</span> 
+               <i class="fa-sharp fa-regular fa-heart"><span id="wishlist-counter">0</span></i>
+            </li>
+            <li id="cart-section" class="list-height"><span id="cart-text">CART</span>
+               <i class="fa-solid fa-bag-shopping"><span id="cart-counter">0</span></i>
+            </li>
+            <li class="list-height"><i class="fa-regular fa-user"></i><span id="user-name">JITHENDRA PULUSU</span>
+               <i class="fa-solid fa-angle-down"></i>
+            </li>
+         </ul>
+         </div>
+
+         </ul>
+      </nav>
+      <div class="nav-contents">
+         <div class="logo">
+            <img src="./assets/Kraya_logo.svg" alt="kraya logo">
+         </div>
+         <nav class="navigation-links">
+            <ul>
+               <li><a class="list-height preventing-reloading uppercase" href="#">phone</a></li>
+               <li><a class="list-height preventing-reloading uppercase" href="#">telivision</a></li>
+               <li><a class="list-height preventing-reloading uppercase" href="#">refrigerator</a></li>
+               <li><a class="list-height preventing-reloading uppercase" href="#">laptop</a></li>
+               <li><a class="list-height preventing-reloading uppercase" href="#">washing machine</a></li>
+               <li><a class="list-height preventing-reloading uppercase" href="#">downloads</a></li>
+            </ul>
+         </nav>
+         <div class="search-icon">
+            <i id="#search-bar" class="fa-solid fa-magnifying-glass"></i>
+         </div>
+         <!-- search initiator for mobile starts -->
+         <div class="search-box-wrapper">
+            <input class="product-finder" type="text" placeholder="Search for products &">
+            <div class="search-icon">
+               <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+         </div>
+         <!-- search initiator for mobile ends -->
+      </div>
+   </header>
+   <!-- header ends -->
+   <!-- main starts -->
+   <main class="kraya-main-wrapper">
+      <!-- filters for mobile -->
+      <div class="product-seperator">
+         <button class="filter-button"><i class="fa-solid fa-arrow-down-wide-short"></i>SORT BY</button>
+         <button class="filter-button"><i class="fa-solid fa-filter"></i>FILTERS</button>
+         <div class="products-count-in-mobile">
+            <h1></h1>
+         </div>
+      </div>
+      <!-- filters for mobile ends -->
+      <div class="kraya-main-content">
+         <div class="sort-header">
+            <div class="active-page">
+               <ul>
+                  <li><a href="#" class="preventing-reloading">HOME </a></li>
+                  <li>/</li>
+                  <li><a href="#" class="preventing-reloading">MOBILES</a></li>
+               </ul>
+            </div>
+            <div class="selected-product-count-description">
+               <h1 id="product-count">Showing <span id="count"></span> results of mobiles</h1>
+            </div>
+            <!-- sort-by-filter starts -->
+            <div class="sort-by-filter">
+               <ul id="sort-by-connector">
+                  <li class="product-sorting-filter product-sorting-gap">Sort By</li>
+                  <li id="product-rating"
+                     class="product-relevance product-sorting-gap product-sorting-item "><a
+                        id="rating" href="#" class="preventing-reloading adding-color">Ratings</a></li>
+                  <li id="priceFilter"
+                     class="product-sort-by-price product-sorting-gap product-sorting-item "><a
+                     id="low-High" href="#" class="preventing-reloading adding-color">Price low-High</a></li>
+                  <li id="new-tag-product"
+                     class="product-sort-by-new product-sorting-gap product-sorting-item "><a
+                        id='new' href="#" class="preventing-reloading adding-color">Newest First</a></li>
+               </ul>
+            </div>
+         </div>
+         <!-- kraya filters starts -->
+         <div class="kraya-filter-product-wrapper">
+            <aside class="aside-wrapper">
+               <ul class="kraya-filter-wrapper">
+                  <li id="fill" class="filter-items-spacing">
+                     <h2>FILTERS</h2>
+                     <a href="#" class="clear-brands-selection preventing-reloading" id="clear-all">CLEAR ALL</a>
+                  </li>
+                  <li class=" brand-filter filter-item-feature filter-items-spacing">
+                     <a href="#" id="filter-price-slider" class="filter-item-spacer preventing-reloading">Price <i
+                           class="fa-solid fa-angle-down"></i></a>
+                     
+                     <div class="price-slide" id="priceContents">
+                        <div id="slider"></div>
+                        <div class="price-range">
+                           <div class="pricedata" id="minimumPrice">$50</div>
+                           <div class="pricedata" id="maximumPrice">$2000</div>
+                        </div>
+                     </div>
+                  
+                  </li>
+                  <li class="brand-filter filter-item-feature filter-items-spacing">
+                     <a id="filter-brand" class="filter-item-spacer preventing-reloading">Brand<i
+                           class="fa-solid fa-angle-down"></i></a>
+                     <div class="brands-list">
+                        <form id="brand-contents" class="brand" action="#">
+                           <fieldset>
+                              <legend></legend>
+                              <input type="checkbox" id="apple-product" name="product" value="apple">
+                              <label for="apple-product">Apple</label>
+                           </fieldset>
+                           <fieldset>
+                              <legend></legend>
+                              <input type="checkbox" id="Sony-product" name="product" value="Sony">
+                              <label for="Sony-product">Sony</label>
+                           </fieldset>
+                           <fieldset>
+                              <legend></legend>
+                              <input type="checkbox" id="Asus-product" name="product" value="Asus">
+                              <label for="Asus-product">Asus</label>
+                           </fieldset>
+                           <fieldset>
+                              <legend></legend>
+                              <input type="checkbox" id="LG-product" name="product" value="LG">
+                              <label for="LG-product">LG</label>
+                           </fieldset>
+                           <fieldset>
+                              <legend></legend>
+                              <input type="checkbox" id="oneplus-product" name="product" value="oneplus">
+                              <label for="oneplus-product">OnePlus</label>
+                           </fieldset>
+                           <fieldset>
+                              <legend></legend>
+                              <input type="checkbox" id="Honor-product" name="product" value="Honor">
+                              <label for="Honor-product">Honor</label>
+                           </fieldset>
+                           <fieldset>
+                              <legend></legend>
+                              <input type="checkbox" id="Xiaomi-product" name="product" value="Xiaomi">
+                              <label for="Xiaomi-product">Xiaomi</label>
+                           </fieldset>
+                           <fieldset>
+                              <legend></legend>
+                              <input type="checkbox" id="RealMe-product" name="product" value="RealMe">
+                              <label for="RealMe-product">RealMe</label>
+                           </fieldset>
+                        </form>
+                        <span class="show-more-filter">+ show more</span>
+                     </div>
+                  </li>
+                  <li class=" filter-item-feature filter-items-spacing">
+                     <a href="#" class="filter-item-spacer preventing-reloading">Battery Capacity <i
+                           class="fa-solid fa-angle-down"></i></a>
+                  </li>
+                  <li class=" filter-item-feature filter-items-spacing">
+                     <a href="#" class="filter-item-spacer preventing-reloading">Screen Size <i
+                           class="fa-solid fa-angle-down"></i></a>
+                  </li>
+                  <li class=" filter-item-feature filter-items-spacing">
+                     <a href="#" class="filter-item-spacer preventing-reloading">RAM <i
+                           class="fa-solid fa-angle-down"></i></a>
+                  </li>
+                  <li class=" filter-item-feature filter-items-spacing">
+                     <a href="#" class="filter-item-spacer preventing-reloading">Customer Ratings <i
+                           class="fa-solid fa-angle-down"></i></a>
+                  </li>
+                  <li class=" filter-item-feature filter-items-spacing">
+                     <a href="#" class="filter-item-spacer preventing-reloading">Camera <i
+                           class="fa-solid fa-angle-down"></i></a>
+                  </li>
+                  <li class=" filter-item-feature filter-items-spacing">
+                     <a href="#" class="filter-item-spacer preventing-reloading">Resolution Type<i
+                           class="fa-solid fa-angle-down"></i></a>
+                  </li>
+                  <li class=" filter-item-feature filter-items-spacing">
+                     <a href="#" class="filter-item-spacer preventing-reloading">Operating System <i
+                           class="fa-solid fa-angle-down"></i></a>
+                  </li>
+               </ul>
+            </aside>
+            <!-- kraya filters ends -->
+            <!-- products data starts -->
+            <div id="product-tiles-data" class="product-tiles">
+               <!-- products data ends -->
+            </div>
+         </div>
+   </main>
+   <!-- main ends -->
+   <!-- footer starts  -->
+   <footer>
+      <a href="#top"><i class="fa-solid fa-angle-up"></i></a>
+      <div class="footer-head">
+         <div class="combined-greetings">
+            <div class="footer-head-greetings">
+               <h2 class="uppercase">let's stay in touch</h2>
+               <span>Get updates on sales specials and more</span>
+            </div>
+            <div class="foooter-head-email-wrapper">
+               <input type="email" placeholder="Email address">
+               <input type="button" value="SUBSCRIBE">
+            </div>
+         </div>
+         <div class="footer-follow-media-wrapper">
+            <div class="follow-text">
+               <h2 class="uppercase">follow kraya.</h2>
+               <span>We want to hear from you</span>
+            </div>
+            <div class="footer-social-media-links">
+               <ul>
+                  <li class="social-media-icons"><i class="fa-brands fa-square-facebook"></i></li>
+                  <li class="social-media-icons"><i class="fa-brands fa-twitter"></i></li>
+                  <li class="social-media-icons"><i class="fa-brands fa-square-facebook"></i></li>
+                  <li class="social-media-icons"><i class="fa-brands fa-instagram"></i>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </div>
+      <div class="footer-content">
+         <div class="footer-content-combined">
+            <div class="footer-about ">
+               <h3 class="links-heading uppercase">about</h3>
+               <ul class="supporting-links">
+                  <li class="link-items"><a href="#" class="preventing-reloading ">About US</a></li>
+                  <li class="link-items"><a href="#" class="preventing-reloading">Careers</a></li>
+                  <li class="link-items"><a href="#" class="preventing-reloading">Blog</a></li>
+                  <li class="link-items"><a href="#" class="preventing-reloading">News</a></li>
+               </ul>
+            </div>
+            <div class="footer-support">
+               <h3 class="links-heading uppercase">support</h3>
+               <ul class="supporting-links">
+                  <li class="link-items"><a href="#" class="preventing-reloading ">Payment</a></li>
+                  <li class="link-items"><a href="#" class="preventing-reloading">Shipping</a></li>
+                  <li class="link-items"><a href="#" class="preventing-reloading">Cancellation & Returns</a></li>
+                  <li class="link-items"><a href="#" class="preventing-reloading">FAQs</a></li>
+               </ul>
+            </div>
+            <div class="footer-policy">
+               <h3 class="links-heading uppercase">policy</h3>
+               <ul class="supporting-links">
+                  <li class="link-items"><a href="#" class="preventing-reloading ">Terms of Use</a></li>
+                  <li class="link-items"><a href="#" class="preventing-reloading">Privacy Policy</a></li>
+                  <li class="link-items"><a href="#" class="preventing-reloading">Intellectual Property</a></li>
+                  <li class="link-items"><a href="#" class="preventing-reloading">Sitemap</a></li>
+                  <li class="link-items"><a href="#" class="preventing-reloading">Security</a></li>
+               </ul>
+            </div>
+            <div class="footer-mailus">
+               <h3 class="links-heading uppercase">mail us</h3>
+               <span class="mail-address">17187 N. Laurel park Dr., Ste:110 </span><br>
+               <span class="mail-address">Livonia, Ml 48152 USA</span>
+            </div>
+         </div>
+         <div class="footer-contact">
+            <h2>1800 123 4567</h2>
+            <span>Service hours: 09:00-21:00</span>
+            <button class="uppercase">
+               chat support
+            </button>
+            <h4 class="uppercase">payment methods</h4>
+            <div class="footer-payments-icons">
+               <ul>
+                  <li class="payment-links"> <a href="#" class="preventing-reloading"><img src="./assets/visa-card.png"
+                           alt="visa-card"></a>
+                  </li>
+                  <li class="payment-links"> <a href="#" class="preventing-reloading"><img
+                           src="./assets/master-card.png" alt="master-card"></a></li>
+                  <li class="payment-links"> <a href="#" class="preventing-reloading"><img
+                           src="./assets/discover-card.png" alt="discover-card"></a></li>
+                  <li class="payment-links"> <a href="#" class="preventing-reloading"><img
+                           src="./assets/american-express-card.png" alt="american-express-card"></a></li>
+                  <li class="payment-links"> <a href="#" class="preventing-reloading"><img
+                           src="./assets/paypal-card.png" alt="paypal-card"></a></li>
+               </ul>
+            </div>
+         </div>
+      </div>
+      <div class="footer-copyright">
+         <span>Copyright © 2010 - 2018 commerce factory. All Rights Reserved</span>
+      </div>
+   </footer>
+   <script  src="./assets/mini_project_js/mini-project.js"></script>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
