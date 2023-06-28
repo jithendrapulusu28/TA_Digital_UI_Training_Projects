@@ -1,0 +1,452 @@
+/*===============  CSS RESET ===============*/
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --header-height: 3.5rem;
+  --primary-color: rgb(76, 76, 43);
+  --overlay-color: rgba(24, 39, 51, 0.85);
+  --menu-speed: 0.75s;
+  --line-height: 1.5;
+
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+
+  --title-color: rgb(0, 0, 0);
+  --body-color: rgb(10, 10, 11);
+  --text-color: rgb(186, 190, 196);
+  --text-color-light: rgb(136, 139, 145);
+  --white-color: rgb(255, 255, 255);
+  --header--color: rgb(55, 64, 81);
+  --bg-sunset-color: linear-gradient(to top,
+      #14245f,
+      #ff5341 9.625rem,
+      #ffad73 21.875rem,
+      rgba(255, 173, 115, 0));
+  --bg-btn-color: rgb(20, 36, 95);
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --open-sens-font-family: "Open Sans", sans-serif;
+  --section-title-font-size: 1.5rem;
+  --section-sub-title-font-size: 1.25rem;
+  --normal-font-size: 0.938rem;
+
+  /*========== Font weight ==========*/
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semi-bold: 600;
+  --font-bold: 700;
+}
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+.container {
+  max-width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.section-title {
+  font-family: var(--open-sens-font-family);
+  font-weight: var(--font-bold);
+  font-size: var(--section-title-font-size);
+  color: var(--title-color);
+  line-height: var(--line-height);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.section-sub-title {
+  margin-bottom: 1rem;
+  font-family: var(--open-sens-font-family);
+  font-weight: var(--font-bold);
+  font-size: var(--section-sub-title-font-size);
+  color: var(--title-color);
+  line-height: var(--line-height);
+}
+
+.section-para {
+  margin-bottom: 1rem;
+  font-family: var(--open-sens-font-family);
+  font-weight: var(--font-regular);
+  color: var(--title-color);
+  font-size: var(--normal-font-size);
+  line-height: var(--line-height);
+}
+
+.main {
+  overflow: hidden;
+}
+
+.sidebar {
+  position: fixed;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background: #042331;
+  transition: all 0.5s ease;
+}
+
+.sidebar header {
+  font-size: 22px;
+  color: white;
+  text-align: center;
+  line-height: 70px;
+  background: #063146;
+  user-select: none;
+}
+
+.sidebar ul a {
+  display: block;
+  height: 100%;
+  width: 100%;
+  line-height: 65px;
+  font-size: 20px;
+  color: white;
+  padding-left: 40px;
+  box-sizing: border-box;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid black;
+  transition: all 0.5s ease;
+}
+
+ul li:hover a {
+  padding-left: 50px;
+}
+
+.sidebar ul a i {
+  margin-right: 16px;
+}
+
+#check {
+  display: none;
+}
+
+label #btn,
+label #cancel {
+  position: absolute;
+  cursor: pointer;
+  background: #042331;
+  border-radius: 3px;
+}
+
+label #btn {
+  left: 40px;
+  top: 25px;
+  font-size: 35px;
+  color: white;
+  padding: 6px 12px;
+  transition: all 0.5s;
+}
+
+label #cancel {
+  z-index: 1111;
+  left: -195px;
+  top: 17px;
+  font-size: 30px;
+  color: #0a5275;
+  padding: 4px 9px;
+  transition: all 0.5s ease;
+}
+
+#check:checked~.sidebar {
+  left: 0;
+}
+
+#check:checked~label #btn {
+  left: 250px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+#check:checked~label #cancel {
+  left: 195px;
+}
+
+#check:checked~section {
+  margin-left: 250px;
+}
+
+section {
+  background: url("../Assets/img/range_rover_sport_dynamic_black.png");
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  transition: all 0.5s;
+}
+
+span {
+  line-height: 4;
+}
+
+.sidebar ul li a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.hidden-menu {
+  position: absolute;
+  background: #042331;
+  width: 200px;
+  right: -200px;
+  top: 0px;
+  opacity: 0;
+  border-radius: 2px;
+  padding: 13px;
+  transition: 0.2s ease;
+  pointer-events: none;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.sidebar ul li a:hover .hidden-menu {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.hidden-menu li {
+  text-align: center;
+}
+
+.final-price {
+  color: white;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0);
+  background-color: black;
+  padding: 15px;
+  transition: all 0.3s ease;
+  display: inline-block;
+  text-align: center;
+}
+
+.final-price:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid #555555;
+}
+
+.final-desc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 21vh;
+  gap: 11px 0;
+}
+
+table {
+  font-family: var(--open-sens-font-family);
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+header {
+  height: 200px;
+}
+
+
+@media screen and (max-width:1017px) {
+  .sidebar {
+    width: 153px;
+  }
+
+  .hidden-menu {
+    width: 122px;
+    right: -121px;
+  }
+
+  #check:checked~section {
+    margin-left: 143px;
+  }
+
+  #check:checked~label #btn {
+    left: 49px;
+    top: 100px;
+  }
+
+  #check:checked~label #cancel {
+    left: 56px;
+
+  }
+
+  label #cancel {
+
+    top: 105px;
+  }
+}

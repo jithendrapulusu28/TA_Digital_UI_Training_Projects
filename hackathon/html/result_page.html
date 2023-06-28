@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--=============== FONT AWESOME ===============-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!--=============== Jquery CDN ===============-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <!--=============== FONT FAMILY  ===============-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="../css/resulting_page.css">
+    <title>Result Page</title>
+</head>
+<body>
+   <input type="checkbox" id="check">
+   <label for="check">
+    <i class="fa-solid fa-bars" id="btn"></i>
+    <i class="fa-solid fa-xmark" id="cancel"></i>
+   </label>
+    <div class="sidebar">
+      <header>Filters</header>
+      <ul>
+        <li>
+          <a href="#">
+            <span >colors</span>
+            <i class="fa-solid fa-angle-right"></i>
+            <ul class="hidden-menu colors">
+              <li data-color="0">
+                Red
+              </li>
+              <li data-color="1">Black</li>
+              <li data-color="2">
+                Bronze
+              </li>
+            </ul>
+          </a>
+      </li>
+        <li>
+          <a href="#">
+             <span>wheels</span>
+             <i class="fa-solid fa-angle-right"></i>
+             <ul class="hidden-menu wheels">
+                <li  data-wheel="0">
+                  5126GreyWheel
+                </li>
+                <li data-wheel="1">5125GreyWheel</li>
+                <li data-wheel="2">
+                  5125SteelWheel
+                </li>
+              </ul>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+             <span>seating</span>
+             <i class="fa-solid fa-angle-right"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+             <span>options</span>
+             <i class="fa-solid fa-angle-right"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+             <span>summary</span>
+             <i class="fa-solid fa-angle-right"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <section class="bg-img">
+    </section>
+    <div class="final-desc">
+      <div>
+        <button class="final-price">get final price</button>
+      </div>
+      <div>
+        
+       <table>
+         <tr>
+           <th>Color Price</th>
+           <th>Wheel Price</th>
+           <th>Total Amount</th>
+         </tr>
+         <tr class="price">
+           <td class="color-price"></td>
+           <td class="wheel-price"></td>
+           <td class="total-amount"></td>
+         </tr>
+</table>
+      </div>
+    </div> 
+    <script type="module" src="../js/resulting_page.js"></script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+{
+    "redCars":{
+       "5126GreyWheel":{ 
+           "id": 1,
+           "carColor": "red",
+           "carColorName":"firenze red",
+           "carWheelName":"5126 satin dark grey",
+           "carName":"range_rover_sport_dynamic_red",
+           "carImgSrc":"../Assets/img/range_rover_sport_dynamic_red.png",
+           "carWheelImg":"../Assets/img/5126_satin_dark_grey_red_wheel_new.png",
+           "PaintPrice":5000,
+           "WheelPrice":12500
+        },
+
+        "5125GreyWheel":{
+            "id": 2,
+            "carColor": "red",
+            "carColorName":"firenze red",
+            "carWheelName":"5125 satin dark grey",
+            "carName":"range_rover_sport_dynamic_red",
+            "carImgSrc":"../Assets/img/range_rover_sport_dynamic_red.png",
+            "carWheelImg":"../Assets/img/5125_satin_dark_grey_red_wheel_new.png",
+            "PaintPrice":5000,
+            "WheelPrice":6700
+        },
+        "5125SteelWheel":{
+            "id": 3,
+            "carColor": "red",
+            "carColorName":"firenze red",
+            "carWheelName":"5125 satin dark steel",
+            "carName":"range_rover_sport_dynamic_red",
+            "carImgSrc":"../Assets/img/range_rover_sport_dynamic_red.png",
+            "carWheelImg":"../Assets/img/5125_satin_dark_steel_red_wheel_new.png",
+            "PaintPrice":5000,
+            "WheelPrice":4500
+        }
+    },
+
+    "blackCars":{
+        "5126GreyWheel":{
+            "id": 4,
+            "carColor": "black",
+            "carColorName":"sanotarini black",
+            "carWheelName":"5126 satin dark grey",
+            "carName":"range_rover_sport_dynamic_black",
+            "carImgSrc":"../Assets/img/5126_satin_dark_grey_black_wheel_new.png",
+            "carWheelImg":"../Assets/img/5126_satin_dark_grey_black_wheel_img.png",
+            "PaintPrice":7800,
+            "WheelPrice":12500
+        },  
+        "5125GreyWheel":{
+            "id": 5,
+            "carColor": "black",
+            "carColorName":"sanotarini black",
+            "carWheelName":"5125 satin dark grey",
+            "carName":"range_rover_sport_dynamic_black",
+            "carImgSrc":"../Assets/img/5126_satin_dark_grey_black_wheel_new.png",
+            "carWheelImg":"../Assets/img/5125_satin_dark_grey_black_wheel_new.png",
+            "PaintPrice":7800,
+            "WheelPrice":6700
+        },
+        "5125SteelWheel":{
+            "id": 6,
+            "carColor": "black",
+            "carColorName":"sanotarini black",
+            "carWheelName":"5125 satin dark steel",
+            "carName":"range_rover_sport_dynamic_black",
+            "carImgSrc":"../Assets/img/range_rover_sport_dynamic_black.png",
+            "carWheelImg":"../Assets/img/5125_satin_dark_steel_black_wheel_new.png",
+            "PaintPrice":7800,
+            "WheelPrice":4500
+        }
+
+    },
+    "bronzeCars":{
+        "5126GreyWheel":
+        {
+            "id": 7,
+            "carColor": "bronze",
+            "carColorName":"lantau bronze",
+            "carWheelName":"5126 satin dark grey",
+            "carName":"range_rover_sport_dynamic_black",
+            "carImgSrc":"../Assets/img/range_rover_sport_dynamic_bronze.png",
+            "carWheelImg":"../Assets/img/5126_satin_dark_grey_bronze_wheel_new.png",
+            "PaintPrice":4500,
+            "WheelPrice":12500
+          },
+          "5125GreyWheel":{
+            "id": 8,
+            "carColor": "bronze",
+            "carColorName":"lantau bronze",
+            "carWheelName":"5125 satin dark grey",
+            "carName":"range_rover_sport_dynamic_black",
+            "carImgSrc":"../Assets/img/range_rover_sport_dynamic_bronze.png",
+            "carWheelImg":"../Assets/img/5125_satin_dark_steel_bronze_wheel_new.png",
+            "PaintPrice":4500,
+            "WheelPrice":6700
+
+          },
+          "5125SteelWheel":{
+            "id": 9,
+            "carColor": "bronze",
+            "carColorName":"lantau bronze",
+            "carWheelName":"5125 satin dark steel",
+            "carName":"range_rover_sport_dynamic_black",
+            "carImgSrc":"../Assets/img/range_rover_sport_dynamic_bronze.png",
+            "carWheelImg":"../Assets/img/5125_satin_dark_steel_bronze_wheel_new.png",
+            "PaintPrice":4500,
+            "WheelPrice":4500
+          }
+        }
+}
